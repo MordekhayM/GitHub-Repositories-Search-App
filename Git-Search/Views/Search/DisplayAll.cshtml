@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "DisplayAll";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <title>DisplayAll</title>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Click The Button To See Your Bookmarked Repositories</h1>
+        <div class="wrapper">
+            <button class="btn" onclick="DisplayAll()">
+                <i class="fa fa-github fa-2x" aria-hidden="true"> Get Repositories List!</i>
+            </button>
+        </div>
+        <br /><br />
+        <div id="disp">
+        </div>
+    </div>
+    <script>
+        // This function is a Bookmark Screen that will show all the bookmarked repositories. First, it will check if
+        // The Session-Storage is not empty and then it will output the existing repositories.
+
+        function DisplayAll() {
+            if (sessionStorage.length == 0) {
+                swal("Your Bookmarked Repositories List Is Empty!");
+            } else {
+                for (let i = 0; i < sessionStorage.length; i++) {
+                    if (i == 0) {
+                        var x = sessionStorage.getItem("Repository");
+                        var obj = JSON.parse(x);
+                        disp.innerHTML += "<h2>" + obj.name + "<h2>";
+                        disp.innerHTML += "<h3>" + obj.description + "<h3>";
+                        disp.innerHTML += ("<img src='" + obj.owner.avatar_url + "' />");
+                        disp.innerHTML += "<hr>";
+                    } else {
+                        var x = sessionStorage.getItem("Repository" + i.toString());
+                        var obj = JSON.parse(x);
+                        disp.innerHTML += "<h2>" + obj.name + "<h2>";
+                        disp.innerHTML += "<h3>" + obj.description + "<h3>";
+                        disp.innerHTML += ("<img src='" + obj.owner.avatar_url + "' />");
+                        disp.innerHTML += "<hr>";
+                    }
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>

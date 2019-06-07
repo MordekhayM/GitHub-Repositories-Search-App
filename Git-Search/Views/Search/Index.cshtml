@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+    <title>Search</title>
+</head>
+<body>
+    <h1><u>GitHub Repository Search Engine</u></h1>
+    <div class="container">
+        <h2>Hi, What Repository Would You Like To Look For?</h2>
+        <input id="search" onsubmit="handle" placeholder="Repository Name" /><br /><br />
+        <button id="button" type="button"><i class="fa fa-github fa-2x" aria-hidden="true"> Search</i></button>
+    </div>
+
+    <div class="col">
+        <div id="results"></div>
+    </div>
+    <div class="col">
+        <div id="session"></div>
+    </div>
+    <script>
+        // This scope will Get the input field, check if the keyCode equal to 13 ("Enter"), Cancel the default action (if needed)
+        // & trigger the button element with a click.
+
+        var input = document.getElementById("search");
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("button").click();
+            }
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

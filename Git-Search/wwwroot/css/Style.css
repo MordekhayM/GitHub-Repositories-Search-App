@@ -1,0 +1,73 @@
+﻿@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap');
+
+h1 {
+    font-weight: bold;
+    font-family: 'IBM Plex Serif', serif;
+    text-align: center;
+    text-decoration-line: underline;
+}
+h2 h3 {
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+}
+.container{
+    text-align:center;
+}
+#search {
+    border: outset;
+    font-family: 'IBM Plex Serif', serif;
+}
+.Bookmark-btn {
+    border: outset;
+    background-color: #00bc8c;
+}
+.Bookmark-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.wrapper {
+    text-align: center;
+    top: 19%;
+    left: 40%;
+}
+.btn {
+    border: outset;
+    top: 19%;
+    left: 40%;
+    background-color: #00bc8c;
+}
+.btn:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+#button {
+    border:outset;
+    text-align: center;
+    background-color: #00bc8c;
+}
+#button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+#disp {
+    width:100%;
+    height:100%;
+    text-align-last:center;
+    image-rendering:auto;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+.home_image {
+    width: 100%;
+    height: auto;
+}
+#results {
+    width: 100%;
+    height: 100%;
+    text-align-last: center;
+    image-rendering: auto;
+}

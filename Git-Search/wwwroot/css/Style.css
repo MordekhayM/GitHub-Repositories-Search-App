@@ -26,9 +26,7 @@ h2 h3 {
     color: white;
 }
 .wrapper {
-    text-align: center;
-    top: 19%;
-    left: 40%;
+    text-align: center;    
 }
 .btn {
     border: outset;
@@ -70,4 +68,9 @@ img {
     height: 100%;
     text-align-last: center;
     image-rendering: auto;
+}
+#alert {
+    color: red;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight:bold;
 }

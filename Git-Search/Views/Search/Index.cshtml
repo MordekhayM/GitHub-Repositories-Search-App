@@ -15,10 +15,12 @@
     <h1><u>GitHub Repository Search Engine</u></h1>
     <div class="container">
         <h2>Hi, What Repository Would You Like To Look For?</h2>
-        <input id="search" onsubmit="handle" placeholder="Repository Name" /><br /><br />
-        <button id="button" type="button"><i class="fa fa-github fa-2x" aria-hidden="true"> Search</i></button>
+        <input id="search" placeholder="Repository Name" /><br /><br />
+        <button id="button" type="submit"><i class="fa fa-github fa-2x" aria-hidden="true"> Search</i></button>
+        <div class="col">
+            <div id="alert"></div>
+        </div>
     </div>
-
     <div class="col">
         <div id="results"></div>
     </div>
